@@ -1,0 +1,52 @@
+services:
+    test:
+        base_url: http://10.0.0.2
+        endpoints:
+            get:
+                - /getCRMs
+            post: 
+                - /testing
+    login_interno:
+        endpoints:
+            post:
+                - /auth/login
+                - /renewtoken
+    chat:
+        base_url:  http://10.0.0.2
+        endpoints:
+            post:
+                - /chat/getdata
+                - /chat/insertdata
+                - /chat/testtunel
+                - /chat/testpokemon
+    ia:
+        base_url:  http://10.0.0.2
+        endpoints:
+            post:
+                - /ia/testia
+    onesignal:
+        endpoints:
+            post:
+                - /onesignal/push
+    salesforce:
+        endpoints:
+            get:
+                - /salesforce/getAccounts
+                - /salesforce/getContacts
+            post:
+                - /salesforce/login
+                - /salesforce/getMe
+                - /salesforce/createAccount
+                - /salesforce/createContact
+                - /salesforce/editAccount
+                - /salesforce/editContact
+                - /salesforce/deleteAccount
+                - /salesforce/deleteContact
+                - /salesforce/sendEmails
+                - /salesforce/speechIa
+                - /crm/getclientandlogin
+    textract:
+        endpoints:
+            post:
+                - /textract/analyzeText
+                - /textract/analyzeForm
